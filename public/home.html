@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="templates/styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+<!-- First Header -->
+<div class="header">
+    <h1>School Version 1.0</h1>
+</div>
+
+<!-- Second Header with Toggle Sidebar Button -->
+<div class="second-header">
+    <button class="btn btn-primary" id="sidebar-toggle">Toggle Sidebar</button>
+</div>
+
+<!-- Collapsible Sidebar -->
+<div class="sidebar" id="sidebar">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+        <a class="nav-link" href="student.html">Student</a>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Subject</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Enrollment</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+        </li>
+    </ul>
+</div>
+
+<div class="image-container">
+    <img src="./HuTaonotes.png" alt="Your Image" class="centered-image">
+    <div class="text-container">
+        <p>Welcome welcome, to create a student navigate to the top left corner and click on the toggle sidebar button. You can also find the options for Subjects, Enrollment, and Reports in there.</p>
+    </div>
+</div>
+
+<!-- Rest of your content goes here -->
+
+<script>
+    document.getElementById("sidebar-toggle").addEventListener("click", function() {
+        document.getElementById("sidebar").classList.toggle("sidebar-open");
+    });
+</script>
+
+</body>
+</html>

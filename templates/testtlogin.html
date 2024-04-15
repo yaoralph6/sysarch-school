@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Login
+        </div>
+        <div class="card-body">
+            <form name="loginForm" ng-controller="LoginController" ng-submit="login()">
+                <div class="form-group">
+                  <label for="username">Username:</label>
+                  <input type="text" class="form-control" id="username" ng-model="username" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" id="password" ng-model="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+              </form>   
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script>
+  var app = angular.module('loginApp', []);
+
+  app.controller('LoginController', function($scope) {
+    $scope.login = function() {
+      // Here you can add logic to authenticate the user
+      // For demonstration, let's just log the username and password
+      console.log('Username: ' + $scope.username);
+      console.log('Password: ' + $scope.password);
+    };
+  });
+</script>
+
+</body>
+</html>

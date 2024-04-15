@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+
+<div style="width: 300px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; text-align: center;">
+    <h2>Login Form</h2>
+    <form style="text-align: left;" action="/login" method="post">
+        <div style="margin-bottom: 20px;">
+            <p>Email: <input style="width: calc(100% - 22px); padding: 10px; border: none; background: #f1f1f1;" type="email" name="email" required></p>
+            <p>Password: <input style="width: calc(100% - 22px); padding: 10px; border: none; background: #f1f1f1;" type="password" name="password" required></p>
+        </div>
+        <input style="width: calc(100% - 22px); padding: 10px; border: none; border-radius: 5px; background-color: #4caf50; color: white; cursor: pointer;" type="submit" value="Login">
+    </form>
+    <div style="color: red; font-weight: bold;" id="error-message"></div>
+</div>
+
+</body>
+</html>

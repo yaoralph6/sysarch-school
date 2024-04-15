@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="templates/css/w3css.css">
+<link rel="stylesheet" href="templates/styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+<!-- First Header -->
+<div class="header">
+    <h1>Student</h1>
+</div>
+
+<!-- Second Header with Toggle Sidebar Button -->
+<div class="second-header">
+    <button class="btn btn-primary" id="sidebar-toggle">Toggle Sidebar</button>
+</div>
+
+<!-- Collapsible Sidebar -->
+<div class="sidebar" id="sidebar">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+        <a class="nav-link" href="home.html">HOME</a>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Subject</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Enrollment</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+        </li>
+    </ul>
+</div>
+
+<div class="content">
+    <div class="w3-half w3-container w3-padding">
+      <div class="w3-card-4 w3-round-xlarge w3-container w3-padding">
+        <h2>Create Student</h2>
+        <form id="createStudentForm" action="/students" method="POST">
+          <label for="idno">ID Number:</label><br>
+          <input type="text" id="idno" name="idno" required><br>
+          
+          <label for="firstName">First Name:</label><br>
+          <input type="text" id="firstName" name="firstName" required><br>
+          
+          <label for="lastName">Last Name:</label><br>
+          <input type="text" id="lastName" name="lastName" required><br>
+          
+          <label for="course">Course:</label><br>
+          <input type="text" id="course" name="course" required><br>
+          
+          <label for="level">Level:</label><br>
+          <input type="text" id="level" name="level" required><br><br>
+          
+          <button type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+<br><br>
+    <div class="w3-half w3-container w3-padding">
+      <h2>Students List</h2>
+      <table class="w3-table-all" id="studentsTable">
+        <thead>
+          <tr>
+            <th>ID Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Course</th>
+            <th>Level</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentsTableBody">
+          <!-- Student rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal for Updating Student Information -->
+<div id="updateStudentModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Update Student Information</h2>
+    <form id="updateStudentForm">
+      <label for="updateIdno">ID Number:</label><br>
+      <input type="text" id="updateIdno" name="updateIdno" disabled><br>
+      
+      <label for="updateFirstName">First Name:</label><br>
+      <input type="text" id="updateFirstName" name="updateFirstName" required><br>
+      
+      <label for="updateLastName">Last Name:</label><br>
+      <input type="text" id="updateLastName" name="updateLastName" required><br>
+      
+      <label for="updateCourse">Course:</label><br>
+      <input type="text" id="updateCourse" name="updateCourse" required><br>
+      
+      <label for="updateLevel">Level:</label><br>
+      <input type="text" id="updateLevel" name="updateLevel" required><br><br>
+      
+      <button type="submit">Update</button>
+    </form>
+    
+  </div>
+</div>
+
+  
+  <script src="main.js"></script>
+  <script>
+    // Fetch student list when the page loads
+    fetchStudentList();
+  </script>
+  
+  </body>
+  </html>
+  

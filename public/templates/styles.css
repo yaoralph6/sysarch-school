@@ -1,0 +1,103 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #855858;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* Second Header */
+.second-header {
+    background-color: #a76666;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Collapsible Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #b38574;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+/* Toggle button */
+#sidebar-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+/* Adjust content when sidebar is open */
+.sidebar-open {
+    width: 250px;
+}
+
+.main-content {
+    transition: margin-left 0.5s;
+}
+
+.sidebar-open + .main-content {
+    margin-left: 250px;
+}
+
+/* styles.css */
+
+/* Add styles for the image container */
+.image-container {
+    text-align: center; /* Center the image horizontally */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+/* Add styles for the image */
+.centered-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+/* Add styles for the text container */
+.text-container {
+    margin-top: 20px; /* Add some top margin for spacing */
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+}
+
+/* Add styles for the paragraph */
+.text-container p {
+    font-size: 20px; /* Increase the font size */
+    line-height: 1.5; /* Set the line height for better readability */
+}
+
+.container {
+    border: 2px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Add rounded corners */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    background-color: #f9f9f9; /* Add a background color */
+}
