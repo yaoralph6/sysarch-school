@@ -6,21 +6,21 @@
 <title>Home Page</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="templates/css/w3css.css">
-<link rel="stylesheet" href="templates/styles.css"> <!-- Link to the CSS file -->
+<link rel="stylesheet" href="templates/styles.css"> 
 </head>
 <body>
 
-<!-- First Header -->
+
 <div class="header">
     <h1>Student</h1>
 </div>
 
-<!-- Second Header with Toggle Sidebar Button -->
+
 <div class="second-header">
     <button class="btn btn-primary" id="sidebar-toggle">Toggle Sidebar</button>
 </div>
 
-<!-- Collapsible Sidebar -->
+
 <div class="sidebar" id="sidebar">
     <ul class="nav flex-column">
         <li class="nav-item">
@@ -53,17 +53,31 @@
           <label for="lastName">Last Name:</label><br>
           <input type="text" id="lastName" name="lastName" required><br>
           
-          <label for="course">Course:</label><br>
-          <input type="text" id="course" name="course" required><br>
-          
-          <label for="level">Level:</label><br>
-          <input type="text" id="level" name="level" required><br><br>
-          
+          <p>
+						<label><b>COURSES</b></label>
+						<select id="course" ng-model="course" class="w3-select" required>
+							<option value="bsit">INFORMATION TECHNOLOGY</option>
+							<option value="bsim">INFORMATION MANAGEMENT</option>
+							<option value="bsis">INFORMATION SYSTEMS</option>
+							<option value="bscs">COMPUTER SCIENCE</option>
+							<option value="act">ASSOC. IN COMPUTER TECH.</option>
+						</select>
+					</p>
+          <p>
+						<label><b>LEVEL</b></label>
+						<select id="level" ng-model="level" class="w3-select" required>
+							<option value="1">FIRST YEAR</option>
+							<option value="2">SECOND YEAR</option>
+							<option value="3">THIRD YEAR</option>
+							<option value="4">FOURTH YEAR</option>
+						</select>
+					</p>
           <button type="submit">Create</button>
         </form>
       </div>
     </div>
 <br><br>
+<input type="text" ng-model="search" placeholder="&#128269; search..." class="w3-padding w3-left"><br><br>
     <div class="w3-half w3-container w3-padding">
       <h2>Students List</h2>
       <table class="w3-table-all" id="studentsTable">
@@ -78,13 +92,13 @@
           </tr>
         </thead>
         <tbody id="studentsTableBody">
-          <!-- Student rows will be dynamically added here -->
+          
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Modal for Updating Student Information -->
+  
 <div id="updateStudentModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -114,7 +128,7 @@
   
   <script src="main.js"></script>
   <script>
-    // Fetch student list when the page loads
+    
     fetchStudentList();
   </script>
   
